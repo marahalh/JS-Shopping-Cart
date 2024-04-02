@@ -138,56 +138,59 @@ if(addedItem.length != 0) {
 }
 
 
-  if(localStorage.getItem=("username")){
-        function addToCart(id){
-           // let c=localStorage.getItem("ProductsInCart").fin
-           /* let choosenItem = products.find((item) => item.id === id );
-            
-            let index = products.indexOf(choosenItem);
-            products[index].count += 1 ; 
-            if (products[index].count == 1)
-            {
-                chosenProductsCount++;
-                cartProductDiv.innerHTML += `<p id=${choosenItem.id}>${choosenItem.title}</p>`;
-                addedItem = [...addedItem , choosenItem]
-            }
-            else
-            {
-                chosenProductsCount++;
-                let cartProduct = document.getElementById(choosenItem.id)
-                console.log("chh" + cartProduct)
-                cartProduct.innerHTML = `<p id=${choosenItem.id}>${choosenItem.title} (${choosenItem.count})</p>`;
-                
-            }*/
-            let choosenItem = addedItem.find((item) => item.id === id );
-            if (choosenItem)
-            {
-                chosenProductsCount++;
-                addedItem[addedItem.indexOf(choosenItem)].count ++;
-                let cartProduct = document.getElementById(choosenItem.id)
-                cartProduct.innerHTML = `<p id=${choosenItem.id}>${choosenItem.title} x${choosenItem.count}</p>`;
-                
-            }
-            else
-            {
-                choosenItem = products.find((item) => item.id === id );
-                choosenItem.count ++;
-                chosenProductsCount++;
-                cartProductDiv.innerHTML += `<p id=${choosenItem.id}>${choosenItem.title}</p>`;
-                addedItem = [...addedItem , choosenItem]
-            }
-            
-            localStorage.setItem("ProductsInCart" , JSON.stringify(addedItem) )
-            localStorage.setItem("chosenProductsCount",chosenProductsCount);
-            let cartProductsLength = chosenProductsCount;
-            badge.setAttribute('style', 'display:block !important');
-            badge.innerHTML = cartProductsLength;
-            console.log(addedItem)
+
+function addToCart(id){
+    if(localStorage.getItem("username")){
+        // let c=localStorage.getItem("ProductsInCart").fin
+        /* let choosenItem = products.find((item) => item.id === id );
+        
+        let index = products.indexOf(choosenItem);
+        products[index].count += 1 ; 
+        if (products[index].count == 1)
+        {
+            chosenProductsCount++;
+            cartProductDiv.innerHTML += `<p id=${choosenItem.id}>${choosenItem.title}</p>`;
+            addedItem = [...addedItem , choosenItem]
         }
-    }else {
+        else
+        {
+            chosenProductsCount++;
+            let cartProduct = document.getElementById(choosenItem.id)
+            console.log("chh" + cartProduct)
+            cartProduct.innerHTML = `<p id=${choosenItem.id}>${choosenItem.title} (${choosenItem.count})</p>`;
+            
+        }*/
+
+        let choosenItem = addedItem.find((item) => item.id === id );
+        if (choosenItem)
+        {
+            chosenProductsCount++;
+            addedItem[addedItem.indexOf(choosenItem)].count ++;
+            let cartProduct = document.getElementById(choosenItem.id)
+            cartProduct.innerHTML = `<p id=${choosenItem.id}>${choosenItem.title} x${choosenItem.count}</p>`;
+            
+        }
+        else
+        {
+            choosenItem = products.find((item) => item.id === id );
+            choosenItem.count ++;
+            chosenProductsCount++;
+            cartProductDiv.innerHTML += `<p id=${choosenItem.id}>${choosenItem.title}</p>`;
+            addedItem = [...addedItem , choosenItem]
+        }
+        
+        localStorage.setItem("ProductsInCart" , JSON.stringify(addedItem) )
+        localStorage.setItem("chosenProductsCount",chosenProductsCount);
+        let cartProductsLength = chosenProductsCount;
+        badge.setAttribute('style', 'display:block !important');
+        badge.innerHTML = cartProductsLength;
+        console.log(addedItem)
+    }
+    else {
         window.location ="login.html"
     }
-
+    
+}
 
 
 
