@@ -133,7 +133,7 @@ if(addedItem) {
                 cartProductDiv.innerHTML  += `<p id=${item.id}>${item.title} x${item.count}</p>`;
             }
     })
-    badge.style.display = "block";
+    badge.setAttribute('style', 'display:block !important');
     badge.innerHTML = localStorage.getItem("chosenProductsCount");
 }
 
@@ -181,7 +181,7 @@ if(addedItem) {
             localStorage.setItem("ProductsInCart" , JSON.stringify(addedItem) )
             localStorage.setItem("chosenProductsCount",chosenProductsCount);
             let cartProductsLength = chosenProductsCount;
-            badge.style.display ="block";
+            badge.setAttribute('style', 'display:block !important');
             badge.innerHTML = cartProductsLength;
             console.log(addedItem)
         }

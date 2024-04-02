@@ -162,12 +162,11 @@ nav ul#user_info li .badge {
     background-color: rgb(224, 164, 196,1);
     color: rgb(17, 13, 90);
     text-align: center !important;
-    display: block;
     border-radius: 50%;
     top:-10px;
     right:-15px;
     font-size: 15px;
-    display: none;
+    display: none !important;
     padding: 0px 0px !important;
 }
 /* /////////////////////////////////// */

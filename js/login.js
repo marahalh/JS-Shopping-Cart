@@ -17,7 +17,7 @@ loginBtn.addEventListener ("click" , function(e){
                 window.location = "index.html"
             } , 1500)
         } else {
-            console.log("username or password is wrong ")
+            alert("your username or password is wrong ")
         }
     }
 })
