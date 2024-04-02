@@ -72,7 +72,7 @@ let products = [
         id:6,
         title: "Never Lie",
         color: "grey",
-        imageUrl : ".././Images/book6.jpg",
+        imageUrl : "./Images/book6.jpg",
         desc:"The success of Freida McFadden's The Housemaid has made her an entire domestic thriller brand that ...",
         count:0
 
