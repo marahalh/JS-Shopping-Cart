@@ -124,7 +124,7 @@ let badge = document.querySelector(".badge")
 let addedItem = localStorage.getItem("ProductsInCart") ? JSON.parse(localStorage.getItem("ProductsInCart")) : [];
 
 
-if(addedItem) {
+if(addedItem.length != 0) {
     addedItem.map(item => {
         if (item.count == 1)
                 cartProductDiv.innerHTML += `<p id=${item.id}>${item.title}</p>`;
@@ -136,7 +136,6 @@ if(addedItem) {
     badge.setAttribute('style', 'display:block !important');
     badge.innerHTML = localStorage.getItem("chosenProductsCount");
 }
-
 
 
   if(localStorage.getItem=("username")){
