@@ -5,7 +5,7 @@ let links = document.querySelector ("#links")
 if (localStorage.getItem("username")){
     links.remove()
     userInfo.style.display ="flex"
-    userD.innerHTML = localStorage.getItem("username")
+    userD.innerHTML = "Welcome "+localStorage.getItem("username")
 }
 let logOutBtn = document.querySelector("#logout")
 logOutBtn.addEventListener("click", function (){
